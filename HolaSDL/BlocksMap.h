@@ -21,10 +21,13 @@ private:
 
 	void setCell(int numCols, int numRows);
 
+	void setColor(int color , int& x, int& y);
+
 public:
 
-	BlocksMap(SDL_Renderer*& r ,string filename, string filenameBlocks, int pcWidth, int pxHeigth);
-	void LoadMap(SDL_Renderer*& r ,ifstream& inputmap, string& filenameBlocks);
+	BlocksMap(SDL_Renderer*& r, string filenameTxt, string filenameBlocks, int pxWidth, int pxHeigth);
+	void LoadMap(SDL_Renderer*& r, string& filenameBlocks, string filenameTxt);
+	void renderMap();
 	~BlocksMap();
 };
 

@@ -13,7 +13,7 @@ private:
 	Vector2D _posicion = Vector2D(0,0);
 	int _width;
 	int _heigth;
-	int _color;
+	
 	int _frame;
 	int _row;
 	int _column;
@@ -21,8 +21,10 @@ private:
 	
 
 public:
+	int color;
 	Block(Texture*& texture, Vector2D posicion);
 	void render(const SDL_Rect& destRect, SDL_RendererFlip flip) const;
+	void renderFrame(const SDL_Rect& destRect, int row, int col, int angle, SDL_RendererFlip flip) const;
 	~Block();
 };
 
